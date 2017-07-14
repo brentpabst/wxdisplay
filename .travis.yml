@@ -4,7 +4,7 @@ node_js:
 script:
 - ng build -prod
 before_deploy:
-- tar -czf wxdisplay-$TRAVIS_BRANCH.tar.gz -C dist
+- tar -czf wxdisplay-$TRAVIS_BRANCH.tar.gz -C dist .
 deploy:
   provider: releases
   api_key:
