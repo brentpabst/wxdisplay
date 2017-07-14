@@ -1,0 +1,8 @@
+:host {
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.page-footer {
+    padding-top: 0;
+}

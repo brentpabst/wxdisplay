@@ -1,0 +1,6 @@
+{
+    "metarId": "CWOP:FW0347",
+    "wundergroundId": "KNCKNIGH9",
+    "wundergroundApiUrl": "https://cors-anywhere.herokuapp.com/https://api.wunderground.com/weatherstation/WXDailyHistory.asp?format=XML&ID=",
+    "imageUrl": "https://s3.amazonaws.com/pi-wxcam/wxcam.jpg"
+}
