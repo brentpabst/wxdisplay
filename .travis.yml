@@ -3,7 +3,7 @@ node_js:
 - '8'
 script:
 - ng build -prod
-before_build:
+before_deploy:
 - tar -czf wxdisplay-$TRAVIS_BRANCH.tar.gz -C dist
 deploy:
   provider: releases
