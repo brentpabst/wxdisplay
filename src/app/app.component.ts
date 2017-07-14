@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }     from '@angular/platform-browser';
 
 import * as config from '../config/config.json';
 import * as moment from 'moment';
@@ -17,7 +18,11 @@ export class AppComponent implements OnInit {
   wxob: WxOb;
   date: moment.Moment;
 
-  constructor(private wxobService: WxObService) { }
+  constructor(private titleService: Title, private wxobService: WxObService) { }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
+  }
 
   bodyBackgroundImage() {
     return 'url(' + (<any>config).imageUrl + ')';
@@ -30,7 +35,8 @@ export class AppComponent implements OnInit {
   getObservation(): void {
     this.wxobService
       .getLatestObservation()
-      .then(wxob => this.wxob = wxob);
+      .then(wxob => this.wxob = wxob)
+      .then(wxob => this.setTitle(wxob.location + ', ' + wxob.city + ', ' + wxob.state));
   }
 
   ngOnInit(): void {

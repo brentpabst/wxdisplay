@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
@@ -19,7 +19,8 @@ import { WxObService } from './wxob.service';
     HttpModule,
   ],
   providers: [
-    [WxObService]
+    Title,
+    WxObService
   ],
   bootstrap: [AppComponent]
 })
