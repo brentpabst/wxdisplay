@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title }     from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
 
 import * as config from '../config/config.json';
 import * as moment from 'moment';
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
 
   constructor(private titleService: Title, private wxobService: WxObService) { }
 
-  public setTitle( newTitle: string) {
-    this.titleService.setTitle( newTitle );
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
   bodyBackgroundImage() {
@@ -44,6 +44,10 @@ export class AppComponent implements OnInit {
     setInterval(() => {
       this.loadCurrentTime();
     }, 5000);
+    
     this.getObservation();
+    setInterval(() => {
+      this.getObservation();
+    }, 30000);
   }
 }

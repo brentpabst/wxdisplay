@@ -6,3 +6,17 @@
 .page-footer {
     padding-top: 0;
 }
+
+.measurement {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.measurement-small {
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.light {
+    font-weight: 100;
+}
