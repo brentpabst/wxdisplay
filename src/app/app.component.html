@@ -1,11 +1,19 @@
 <main>
   <div class="container">
     <div class="section row white-text" *ngIf="wxob">
-      <div class="col s6">
+      <div class="col s12 hide-on-med-and-up center-align">
         <h1 class="measurement">{{date.format('LT')}}</h1>
         <h5 class="measurement-small">{{date.format('dddd, LL') | lowercase}}</h5>
       </div>
-      <div class="col s6 right-align">
+      <div class="col s12 hide-on-med-and-up center-align">
+        <h1 class="measurement">{{wxob.temp_f}}&deg;F</h1>
+        <h5 class="measurement-small">{{wxob.temp_c}}&deg;C</h5>
+      </div>
+      <div class="col m6 hide-on-small-only">
+        <h1 class="measurement">{{date.format('LT')}}</h1>
+        <h5 class="measurement-small">{{date.format('dddd, LL') | lowercase}}</h5>
+      </div>
+      <div class="col m6 hide-on-small-only right-align">
         <h1 class="measurement">{{wxob.temp_f}}&deg;F</h1>
         <h5 class="measurement-small">{{wxob.temp_c}}&deg;C</h5>
       </div>
@@ -15,10 +23,10 @@
 <footer class="page-footer blue">
   <div class="container">
     <div class="row" style="margin-bottom: 0;" *ngIf="wxob">
-      <div class="col s12 m8">
+      <div class="col m8">
         <p class="grey-text text-lighten-4 light">{{wxob.getMetar()}}</p>
       </div>
-      <div class="col s12 m4 right-align">
+      <div class="col m4 hide-on-small-only right-align">
         <p class="grey-text text-lighten-4 light">updated <time title="{{wxob.datetime}}" [attr.datetime]="wxob.datetime">{{wxob.datetime.fromNow()}}</time></p>
       </div>
     </div>
