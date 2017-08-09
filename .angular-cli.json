@@ -9,7 +9,13 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon*",
+        "android*",
+        "apple*",
+        "mstile*",
+        "safari*",
+        "browserconfig.xml",
+        "manifest.json"
       ],
       "index": "index.html",
       "main": "main.ts",
